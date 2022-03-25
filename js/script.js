@@ -47,8 +47,7 @@ const app = new Vue({
             } else {
                 this.activeSlidesIndex = 0;
             }
-
-        }
+        },
     }
 });
 
