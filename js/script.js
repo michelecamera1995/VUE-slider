@@ -31,7 +31,7 @@ const app = new Vue({
     el: '#app',
     data: {
         slides,
-        activeSlidesIndex: 0
+        activeSlidesIndex: 0,
     },
     methods: {
         prevslide() {
