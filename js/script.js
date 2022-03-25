@@ -25,5 +25,31 @@ const slides = [
         text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
     }
 ];
-
 console.log(slides);
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        slides,
+        activeSlidesIndex: 0
+    },
+    methods: {
+        prevslide() {
+            if (this.activeSlidesIndex > 0) {
+                this.activeSlidesIndex--;
+            } else {
+                this.activeSlidesIndex = this.slides.length - 1;
+            }
+        },
+        nextslide() {
+            if (this.activeSlidesIndex < this.slides.length - 1) {
+                this.activeSlidesIndex++;
+            } else {
+                this.activeSlidesIndex = 0;
+            }
+
+        }
+    }
+});
+
+
